@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CAPEX: estrategia comercial 2026</title>
+<meta name="description" content="Diagnóstico, mercado y plan go-to-market para CAPEX: préstamos con garantía inmobiliaria en Lima. Octubre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F7F4; --card:#FFFFFF; --fg:#0E1512; --muted:#5F6B66; --faint:#97A19C; --lead:#2E3934;
+  --soft:#EEF0EC; --border:#E2E5E0; --border-soft:#ECEEEA;
+  --pri:#0F5D4A; --pri-deep:#0A3F33; --pri-900:#06231D; --pri-100:#E3F1EC; --pri-200:#C7E3D9;
+  --gold:#E2B33C; --gold-100:#FBF1D6; --clay:#9A3B2E; --clay-100:#F8E3DF; --ok:#2F7A46; --ok-100:#E1F4E6;
+  --hero:radial-gradient(80% 60% at 50% -10%, #146B56 0%, #0C4A3C 30%, #072E26 60%, #04181A 100%);
+  --sans:'Manrope',ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sh-sm:0 1px 2px rgba(14,21,18,.05),0 1px 3px rgba(0,0,0,.05);
+  --sh-card:0 1px 2px rgba(14,21,18,.05),0 12px 24px -18px rgba(6,35,29,.4);
+  --r:.8rem; --r-sm:.5rem; --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.shell{max-width:var(--maxw);margin:0 auto;padding-inline:16px}
+@media (min-width:600px){.shell{padding-inline:24px}}
+h1,h2,h3{margin:0;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;line-height:1.1;margin-bottom:10px}
+h3{font-size:17px;font-weight:800}
+p{margin:0 0 12px;color:var(--muted);max-width:68ch}
+a{color:var(--pri)}
+b,strong{color:var(--fg)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pri);margin:0 0 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eyebrow .when{color:var(--faint);letter-spacing:.06em;padding-left:10px;border-left:1px solid var(--border)}
+.mark{background:linear-gradient(transparent 62%, var(--gold-100) 62% 92%, transparent 92%);padding:0 2px}
+.tag{display:inline-flex;align-items:center;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:5px;padding:2px 7px;vertical-align:middle;white-space:nowrap}
+.tag.e{background:var(--pri-100);color:var(--pri-deep)}
+.tag.x{background:#E7ECF7;color:#2D4C8C}
+.tag.s{background:var(--gold-100);color:#7A5A08}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:20;background:rgba(247,247,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-soft)}
+.nav .shell{display:flex;align-items:center;gap:16px;height:56px}
+.logo{font-weight:800;letter-spacing:.08em;font-size:15px;color:var(--pri-deep);text-decoration:none;display:flex;align-items:center;gap:8px;flex:none}
+.logo i{width:22px;height:22px;border-radius:6px;background:var(--pri);display:grid;place-items:center;color:#fff;font-style:normal;font-size:12px}
+.steps{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.steps a{white-space:nowrap;text-decoration:none;font-size:12.5px;font-weight:700;color:var(--lead);padding:6px 10px;border-radius:999px}
+.steps a:hover,.steps a:focus-visible,.steps a.on{background:var(--pri-100);color:var(--pri-deep);outline:none}
+
+/* HERO */
+.hero{background:var(--pri-900) var(--hero);color:#fff;padding-block:64px 56px}
+.hero .kick{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:22px;flex-wrap:wrap}
+.hero .kick .t{background:var(--gold);color:var(--pri-900);padding:4px 10px;border-radius:6px;letter-spacing:.05em}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:800;line-height:1.06;letter-spacing:-.035em;margin-bottom:18px;color:#fff;max-width:18ch}
+.hero h1 .mk{background:linear-gradient(transparent 80%, var(--gold) 80% 94%, transparent 94%);padding:0 3px}
+.hero .lead{color:rgba(255,255,255,.82);font-size:clamp(16px,2vw,19px);max-width:60ch;margin-bottom:28px}
+.hero .lead b{color:#fff}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.fact{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:14px 16px}
+.fact .n{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.fact .l{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.58);margin-top:6px}
+.fact.hl .n{color:var(--gold)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hero .shell>*{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.hero .shell>*:nth-child(2){animation-delay:.08s}.hero .shell>*:nth-child(3){animation-delay:.16s}.hero .shell>*:nth-child(4){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){.hero .shell>*{animation:none}html{scroll-behavior:auto}}
+
+/* SECTIONS */
+section{padding-block:60px;border-top:1px solid var(--border-soft)}
+.sec-head{max-width:70ch;margin-bottom:28px}
+.sec-head p{color:var(--lead)}
+.mt{margin-top:22px}
+
+/* GRIDS & CARDS */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh-sm)}
+.card .k{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.card h3{margin-bottom:8px}
+.card ul{margin:0;padding-left:18px;color:var(--lead);font-size:14px;line-height:1.55}
+.card ul li+li{margin-top:3px}
+.card p{font-size:14px;color:var(--lead)}
+.card.hl{border-color:var(--pri-200);box-shadow:var(--sh-card)}
+.card.hl .k{color:var(--pri)}
+
+/* NUMBERS */
+.nm{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--sh-sm)}
+.nm .v{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.nm .l{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+.nm .h{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45}
+.nm.hl .v{color:var(--pri)}
+.nm.bad .v{color:var(--clay)}
+
+/* COMPARE */
+.cmp{border-radius:var(--r);padding:18px 20px;border:1px solid var(--border);background:var(--card)}
+.cmp .t{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.cmp .big{font-size:32px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.cmp p{font-size:14px;margin:8px 0 0;color:var(--lead)}
+.cmp.bad .t,.cmp.bad .big{color:var(--clay)}
+.cmp.good{border-color:var(--pri-200);box-shadow:var(--sh-card)}
+.cmp.good .t{color:var(--pri)}.cmp.good .big{color:var(--pri-deep)}
+
+/* TABLE */
+.tbl{width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:var(--r);background:var(--card);box-shadow:var(--sh-sm)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--border-soft);vertical-align:top}
+th{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);background:#FBFBF9}
+td{color:var(--lead)}
+tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td .neg{color:var(--clay);font-weight:800}
+td .pos{color:var(--ok);font-weight:800}
+tr.hl td{background:var(--pri-100)}
+.note{font-size:12.5px;color:var(--faint);margin-top:8px}
+
+/* CALLOUT */
+.callout{border-left:3px solid var(--pri);background:var(--pri-100);border-radius:0 var(--r) var(--r) 0;padding:14px 18px;color:var(--pri-deep);font-size:15px;margin-top:18px}
+.callout b{color:var(--pri-deep)}
+.callout.warn{border-color:var(--clay);background:var(--clay-100);color:#5E2219}
+.callout.warn b{color:#5E2219}
+
+/* PROCESS FLOW */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.fs{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;position:relative}
+.fs .k{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.fs .t{font-weight:800;font-size:14.5px;margin:6px 0 4px;letter-spacing:-.01em}
+.fs .d{font-size:12.5px;color:var(--muted);line-height:1.45}
+.fs.hot{border-color:#E8B9B1;background:var(--clay-100)}
+.fs.hot .k{color:var(--clay)}
+.fs.ext::after{content:"tercero";position:absolute;top:12px;right:12px;font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--soft);color:var(--muted);border-radius:4px;padding:1px 6px}
+
+/* RULES / numbered */
+.rule{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--sh-sm)}
+.rule .k{width:28px;height:28px;border-radius:8px;background:var(--pri);color:#fff;font-weight:800;display:grid;place-items:center;font-size:13px;margin-bottom:10px}
+.rule b{display:block;font-size:14.5px;margin-bottom:4px}
+.rule span{font-size:13px;color:var(--muted);line-height:1.45;display:block}
+.rule .ty{display:inline-block;margin-top:8px}
+
+/* FUNNEL */
+.funnel{display:grid;gap:6px}
+.fr{display:grid;grid-template-columns:180px 1fr 70px;gap:12px;align-items:center;font-size:13.5px}
+.fr .lab{font-weight:700;color:var(--lead)}
+.fr .barw{background:var(--soft);border-radius:6px;height:26px;overflow:hidden}
+.fr .bar{height:100%;background:linear-gradient(90deg,var(--pri),#2A8C72);border-radius:6px}
+.fr .val{text-align:right;font-weight:800;font-variant-numeric:tabular-nums;color:var(--pri-deep)}
+
+/* MESSAGES */
+.msgs{display:grid;gap:12px}
+.msg{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh-sm)}
+.msg .mh{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.msg .mh .w{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pri)}
+.msg .mh .d{font-size:12px;color:var(--faint)}
+.copy{margin-left:auto;font:inherit;font-size:12px;font-weight:800;color:var(--pri-deep);background:var(--pri-100);border:none;border-radius:6px;padding:6px 10px;cursor:pointer}
+.copy:hover{background:var(--pri-200)}
+.copy.ok{background:var(--ok-100);color:var(--ok)}
+.msg pre{margin:0;font:inherit;font-size:14px;line-height:1.5;color:var(--lead);white-space:pre-wrap;background:var(--soft);border-radius:var(--r-sm);padding:10px 12px}
+
+/* TIMELINE 90 days */
+.tl{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:34px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:14px;height:2px;background:linear-gradient(90deg,var(--pri-200),var(--pri) 60%,var(--pri-200))}
+.tl .col{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 16px 18px;box-shadow:var(--sh-sm)}
+.tl .col::before{content:attr(data-n);position:absolute;top:-34px;left:16px;width:28px;height:28px;border-radius:50%;background:var(--card);border:2px solid var(--pri);color:var(--pri);font-weight:800;font-size:13px;display:grid;place-items:center}
+.tl .wk{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.tl .st{font-size:17px;font-weight:800;margin:6px 0 10px}
+.tl ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.tl li{font-size:13.5px;color:var(--lead);line-height:1.45}
+.tl li .who{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--pri);background:var(--pri-100);border-radius:4px;padding:1px 6px;margin-right:4px}
+.tl .kpi{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:13px;color:var(--pri-deep);font-weight:700}
+.tl .col.cur{background:var(--pri-100);border-color:var(--pri-200)}
+.tl .col.cur::before{background:var(--pri);color:#fff}
+
+/* CHECKLIST */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.check li{background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);padding:11px 14px}
+.check label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:14.5px;color:var(--fg);line-height:1.45}
+.check input{appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:2px solid #C9CFCB;border-radius:6px;background:#fff;display:grid;place-items:center;cursor:pointer}
+.check input:checked{background:var(--pri);border-color:var(--pri)}
+.check input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
+.check input:checked+span{color:var(--muted);text-decoration:line-through}
+.check .sub{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--border-soft)}
+.foot .shell{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:24px;flex-wrap:wrap;font-size:12.5px;color:var(--faint)}
+.footbar{background:var(--pri-deep);color:#fff;font-weight:700;font-size:13px;letter-spacing:.04em;min-height:36px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 16px}
+
+@media (max-width:900px){
+  .facts,.grid4{grid-template-columns:repeat(2,1fr)}
+  .grid2,.grid3{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .tl{grid-template-columns:1fr;padding-top:0;padding-left:34px;gap:18px}
+  .tl::before{left:14px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--pri-200),var(--pri) 60%,var(--pri-200))}
+  .tl .col::before{top:14px;left:-34px}
+  .fr{grid-template-columns:120px 1fr 56px;font-size:12.5px}
+}
+@media (max-width:480px){
+  .facts,.grid4,.flow{grid-template-columns:1fr}
+  .logo span{display:none}
+}
+@media print{.nav{position:static}.copy{display:none}section{break-inside:avoid-page}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="shell">
+    <a class="logo" href="#top"><i>C</i><span>CAPEX</span></a>
+    <div class="steps">
+      <a href="#resumen">Resumen</a>
+      <a href="#numeros">Números</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#problemas">Problemas</a>
+      <a href="#mercado">Mercado</a>
+      <a href="#competencia">Competencia</a>
+      <a href="#riesgos">Riesgos</a>
+      <a href="#estrategia">Estrategia</a>
+      <a href="#embudo">Embudo</a>
+      <a href="#mensajes">Mensajes</a>
+      <a href="#plan">Plan 90 días</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#rol">El rol</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="shell">
+    <div class="kick"><span class="t">Propuesta estratégica</span> Octubre 2026 · Lima</div>
+    <h1>De 4 operaciones al mes a una <span class="mk">máquina que escala</span>.</h1>
+    <p class="lead">Diagnóstico, mercado y plan comercial de 90 días para <b>CAPEX</b>, intermediación de préstamos con garantía inmobiliaria. Se basa en la conversación con Miguel Ángel del <b>6 de octubre de 2026</b> y en investigación pública sobre el mercado peruano.</p>
+    <div class="facts">
+      <div class="fact"><div class="n">10 años</div><div class="l">operando desde nov-2015</div></div>
+      <div class="fact"><div class="n">US$18–19 M</div><div class="l">colocados (histórico)</div></div>
+      <div class="fact hl"><div class="n">0</div><div class="l">garantías ejecutadas</div></div>
+      <div class="fact"><div class="n">15–18 días</div><div class="l">ciclo promedio hoy</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- RESUMEN -->
+<section id="resumen">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">01 · Resumen ejecutivo</div>
+      <h2>Rentable por operación, pero no escala como está.</h2>
+      <p>Cada fuente va etiquetada: <span class="tag e">Entrevista</span> lo que dijo Miguel Ángel · <span class="tag x">Externo</span> dato público con fuente · <span class="tag s">Supuesto</span> estimación propia con su razonamiento.</p>
+    </div>
+    <div class="grid3">
+      <div class="rule"><div class="k">1</div><b>La economía por operación funciona</b><span>Un ticket de S/300k deja ~S/22k de margen. Con 2–3 operaciones al mes se cubren los costos y se paga a los socios.</span></div>
+      <div class="rule"><div class="k">2</div><b>La meta exige 2 a 4 veces la capacidad actual</b><span>Colocar S/2,5–5 M al mes son 8–17 operaciones; hoy la capacidad ronda las 4. Si la meta es en US$, son 29–58.</span></div>
+      <div class="rule"><div class="k">3</div><b>Hay tres cuellos de botella, no uno</b><span>Leads sin filtro arriba del embudo, un proceso en serie que depende de una sola persona, y un fondeo sin pipeline.</span></div>
+      <div class="rule"><div class="k">4</div><b>No se puede competir por precio</b><span>La competencia publica tasas desde 1,05–1,8% mensual; CAPEX cobra 2,3–5%. Hay que ganar en tickets grandes, casos complejos, velocidad y confianza.</span></div>
+      <div class="rule"><div class="k">5</div><b>Primero el sistema, después la persona</b><span>El perfil que pide Miguel Ángel es necesario, pero sin un proceso escrito y sin métricas, ese "unicornio" no rinde ni se queda.</span></div>
+      <div class="rule"><div class="k">6</div><b>Dos riesgos legales para validar ya</b><span>Los grupos de WhatsApp con muchos inversionistas, y el tope de tasa del BCRP en operaciones en dólares.</span></div>
+    </div>
+    <div class="callout"><b>Meta propuesta a 90 días:</b> 6–8 operaciones desembolsadas en el mes 3, un ciclo promedio de 12 días o menos, al menos 30% de las operaciones vía referidores y alianzas, y un stack de herramientas por US$350–550 al mes.</div>
+  </div>
+</section>
+
+<!-- NUMEROS -->
+<section id="numeros">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">02 · Números <span class="when">economía por operación</span></div>
+      <h2>Los costos por operación son casi fijos. Por eso conviene el ticket grande.</h2>
+      <p>Comisión del 10% <span class="tag e">Entrevista</span>, escalonada al 5% por encima de S/500k <span class="tag s">Supuesto</span>. Costos directos por operación: revisión legal ~S/2.000, minuta de fideicomiso S/3.500, análisis registral y documental ~S/2.600 <span class="tag e">Entrevista</span>. Tipo de cambio de trabajo: S/3,50.</p>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Ticket</th><th class="n">Comisión</th><th class="n">Costos directos</th><th class="n">Margen sin referidor</th><th class="n">Con referidor US$2k</th><th class="n">Con referidor 50%</th></tr></thead>
+      <tbody>
+        <tr><td><b>S/150.000</b> · conservador</td><td class="n">15.000</td><td class="n">8.100</td><td class="n"><span class="pos">6.900</span></td><td class="n"><span class="neg">−100</span></td><td class="n"><span class="neg">−600</span></td></tr>
+        <tr class="hl"><td><b>S/300.000</b> · base</td><td class="n">30.000</td><td class="n">8.100</td><td class="n"><span class="pos">21.900</span></td><td class="n">14.900</td><td class="n">6.900</td></tr>
+        <tr><td><b>S/600.000</b> · optimista</td><td class="n">55.000</td><td class="n">8.100</td><td class="n"><span class="pos">46.900</span></td><td class="n">39.900</td><td class="n">19.400</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Si el análisis documental se cobra por adelantado al solicitante, cada margen sube S/2.600.</p>
+
+    <div class="grid2 mt">
+      <div class="cmp bad"><div class="t">Hoy: referidos negociados caso a caso</div><div class="big">S/6.900</div><p>es lo que queda de un ticket base si el referidor se lleva el 50%. En tickets de S/150k la operación pierde plata.</p></div>
+      <div class="cmp good"><div class="t">Propuesta: tabla estándar de referidores</div><div class="big">S/14.400</div><p>es lo que queda con un referidor calificado al 25%. Se le paga bien y CAPEX conserva su margen.</p></div>
+    </div>
+
+    <h3 class="mt" style="margin-bottom:12px">¿Cuántas operaciones al mes exige la meta?</h3>
+    <div class="grid4">
+      <div class="nm"><div class="v">~4</div><div class="l">capacidad actual</div><div class="h">"Una por semana" <span class="tag e">Entrevista</span></div></div>
+      <div class="nm hl"><div class="v">8</div><div class="l">S/2,5 M al mes</div><div class="h">con un ticket de S/300k · ~S/250k de comisión</div></div>
+      <div class="nm hl"><div class="v">17</div><div class="l">S/5 M al mes</div><div class="h">con un ticket de S/300k · ~S/500k de comisión</div></div>
+      <div class="nm bad"><div class="v">29–58</div><div class="l">si la meta es en US$</div><div class="h">no es alcanzable sin cambiar de modelo</div></div>
+    </div>
+    <div class="callout"><b>Punto de equilibrio:</b> con costos fijos de S/55k al mes, que ya incluyen un retiro de S/10k por socio <span class="tag s">Supuesto</span>, bastan <b>2,5 operaciones base al mes</b>. Sobrevivir no es el problema; el problema es crecer. <b>Pendiente de confirmar: ¿la meta es en soles o en dólares?</b></div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">03 · Proceso <span class="when">del contacto al desembolso</span></div>
+      <h2>Los plazos de terceros no se aceleran. Lo que se controla es <span class="mark">cuándo se piden y si van en paralelo</span>.</h2>
+      <p>Hoy el proceso toma 7 días como mínimo, 15–18 en promedio y hasta 90 <span class="tag e">Entrevista</span>. Miguel Ángel tiene razón en que SUNARP y el perito no se automatizan; el problema es que hoy se piden <b>uno después del otro</b>.</p>
+    </div>
+    <div class="flow">
+      <div class="fs"><div class="k">Día 0</div><div class="t">Contacto y filtro</div><div class="d">IG, WhatsApp, Google, referido. Los criterios no están escritos.</div></div>
+      <div class="fs hot ext"><div class="k">Días 1–4</div><div class="t">Partida y CRI</div><div class="d">SUNARP. Mientras espera, el cliente se enfría y prueba con la competencia.</div></div>
+      <div class="fs hot"><div class="k">Días 1–7</div><div class="t">Documentos</div><div class="d">Ida y vuelta por WhatsApp, sin checklist.</div></div>
+      <div class="fs hot ext"><div class="k">Días 3–8</div><div class="t">Tasación</div><div class="d">Pago, asignación, visita jueves o viernes, informe lunes o martes. Días muertos.</div></div>
+      <div class="fs hot"><div class="k">+1 día</div><div class="t">Aprobación</div><div class="d">Solo Miguel Ángel aprueba, así que todo depende de su agenda.</div></div>
+      <div class="fs"><div class="k">+1 día</div><div class="t">Propuesta PDF</div><div class="d">Se arma a mano.</div></div>
+      <div class="fs"><div class="k">+2 días</div><div class="t">Preferentes</div><div class="d">48 h de exclusividad, aunque digan que no en una hora.</div></div>
+      <div class="fs hot"><div class="k">+1–14 días</div><div class="t">Grupos de WhatsApp</div><div class="d">Venta "a mercado" sin plazo, y con riesgo regulatorio.</div></div>
+      <div class="fs ext"><div class="k">+2–3 días</div><div class="t">Fideicomiso</div><div class="d">Fiduciario, notaría, SUNARP.</div></div>
+      <div class="fs"><div class="k">Fin</div><div class="t">Desembolso y cobranza</div><div class="d">La cobranza es manual, por WhatsApp.</div></div>
+    </div>
+    <div class="grid2 mt">
+      <div class="cmp bad"><div class="t">Hoy: en serie</div><div class="big">15–18 días</div><p>Cada etapa espera a que termine la anterior. Además, cuando el cliente desiste, CAPEX ya gastó ~US$700–800 en el análisis.</p></div>
+      <div class="cmp good"><div class="t">Propuesta: en paralelo desde el día 1</div><div class="big">9–12 días</div><p>CRI, tasación y documentos se piden juntos, con el análisis pagado por adelantado. La aprobación de casos estándar se delega con una matriz. <span class="tag s">Supuesto</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMAS -->
+<section id="problemas">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">04 · Diagnóstico <span class="when">los 5 problemas, en orden de prioridad</span></div>
+      <h2>Es un marketplace de dos lados, y la escasez puede estar en cualquiera de los dos.</h2>
+    </div>
+    <div class="grid3">
+      <div class="rule"><div class="k">1</div><b>No hay datos del embudo</b><span>No se mide conversión, CAC por canal, morosidad ni tiempos. Toda decisión depende de esto, y resolverlo es barato.</span><span class="tag s ty">Operación</span></div>
+      <div class="rule"><div class="k">2</div><b>Adquisición sin filtro</b><span>La pauta traía leads basura, y sin pauta la demanda queda a merced de la competencia. El problema no era la pauta: faltaba precalificar.</span><span class="tag s ty">Demanda</span></div>
+      <div class="rule"><div class="k">3</div><b>Todo pasa por Miguel Ángel</b><span>El proceso va en serie y la aprobación depende de una persona. Con ~4 operaciones al mes el techo es duro.</span><span class="tag s ty">Operación · Equipo</span></div>
+      <div class="rule"><div class="k">4</div><b>El fondeo no tiene pipeline</b><span>Para colocar S/5 M al mes hacen falta ~150 inversionistas activos <span class="tag s">Supuesto</span>. Hoy hay 3–4 preferentes más los grupos.</span><span class="tag s ty">Oferta</span></div>
+      <div class="rule"><div class="k">5</div><b>Riesgo legal y reputacional</b><span>Los grupos de WhatsApp, un registro SBS de alcance poco claro, un sector con mala prensa. Bien resuelto, se vuelve argumento de venta.</span><span class="tag s ty">Legal</span></div>
+      <div class="card hl"><div class="k">La prioridad de Miguel Ángel</div><h3>"Alguien que respire la operación"</h3><p style="margin:0">El diagnóstico es correcto: en este negocio la confianza es el producto. Pero una persona sin proceso escrito reproduce el problema, y con 4 leads calificados al mes cierra 4 operaciones. <b>Lo que corresponde es armar el sistema, sumar a la persona y abrir el embudo al mismo tiempo.</b></p></div>
+    </div>
+
+    <div class="grid2 mt">
+      <div class="card"><div class="k">Fortalezas</div><ul><li>10 años y ~US$18–19 M colocados</li><li>0 garantías ejecutadas: buen criterio de riesgo</li><li>Hacen los casos grandes y complejos que otros rechazan</li><li>Red de inversionistas y servicio de cobranza</li><li>Código ético: no lucran con emergencias de salud</li></ul></div>
+      <div class="card"><div class="k">Debilidades</div><ul><li>Todo depende de una persona</li><li>Excel, sin CRM ni métricas</li><li>Nadie a cargo de marketing</li><li>Comisiones de referidores negociadas caso a caso</li><li>Costo hundido en las operaciones que se caen</li></ul></div>
+      <div class="card"><div class="k">Oportunidades</div><ul><li>Informalidad alta y poco acceso a crédito formal</li><li>Deudores de tarjetas que pagan 64% TEA</li><li>Ser el actor ético y transparente del sector</li><li>Alianzas con contadores, notarías y tasadores, casi sin explotar</li><li>IA en WhatsApp para precalificar</li></ul></div>
+      <div class="card"><div class="k">Amenazas</div><ul><li>40–50 competidores con pauta agresiva</li><li>Prensa sobre "compraventas simuladas" y pirámides</li><li>Captación de fondos y financiamiento participativo sin licencia SMV</li><li>Los clientes refinancian con otros más baratos (casi no hay renovación)</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- MERCADO -->
+<section id="mercado">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">05 · Mercado <span class="when">fuentes: BCRP, SBS, INEI, PRODUCE, prensa</span></div>
+      <h2>El cliente existe. Tiene casa, el banco no le presta y paga tasas de tarjeta.</h2>
+    </div>
+    <div class="grid4">
+      <div class="nm"><div class="v">~54%</div><div class="l">empleo informal en Lima</div><div class="h">70% a nivel nacional (INEI, 2025–26) <span class="tag x">Externo</span></div></div>
+      <div class="nm"><div class="v">1 de 4</div><div class="l">MYPE accede a crédito formal</div><div class="h">SBS/IPE, mar-2026 <span class="tag x">Externo</span></div></div>
+      <div class="nm"><div class="v">4,5–5 M</div><div class="l">peruanos con deuda vencida o castigada</div><div class="h">~S/40–50 mil M (estimación privada, may-2026) <span class="tag x">Externo</span></div></div>
+      <div class="nm"><div class="v">64%</div><div class="l">TEA promedio de tarjetas</div><div class="h">Banca múltiple, ago-2026; el hipotecario está en 7,5% <span class="tag x">Externo</span></div></div>
+    </div>
+
+    <div class="grid2 mt">
+      <div class="tbl"><table>
+        <thead><tr><th>Distrito</th><th class="n">US$/m² T1-26</th><th class="n">Var. anual</th></tr></thead>
+        <tbody>
+          <tr><td>San Isidro</td><td class="n">2.605</td><td class="n">+21,5%</td></tr>
+          <tr><td>Barranco</td><td class="n">2.556</td><td class="n">+7,6%</td></tr>
+          <tr><td>Miraflores</td><td class="n">2.464</td><td class="n">+10,5%</td></tr>
+          <tr><td>San Borja</td><td class="n">2.099</td><td class="n">+7,9%</td></tr>
+          <tr><td>Surco</td><td class="n">1.818</td><td class="n">+6,6%</td></tr>
+          <tr><td>La Molina</td><td class="n">1.510</td><td class="n">+4,1%</td></tr>
+        </tbody>
+      </table></div>
+      <div class="card"><div class="k">Cómo leerlo</div><p>El alza en dólares es casi toda cambiaria: <b>en soles los precios están planos</b> (+0,5% nominal, −2% real) <span class="tag x">Externo · BCRP</span>.</p><p>Un departamento de 100 m² en Surco vale ~S/630k. Con un LTV del 40% respalda ~S/250k, que es el centro del rango de CAPEX.</p><p style="margin:0"><b>No hay que contar con la revalorización como colchón.</b> El LTV debe ser conservador.</p></div>
+    </div>
+
+    <h3 class="mt" style="margin-bottom:12px">Tamaño del mercado <span class="tag s">Supuesto</span></h3>
+    <div class="grid3">
+      <div class="nm"><div class="v">S/2.500 M</div><div class="l">TAM · por año</div><div class="h">Crédito privado con garantía inmobiliaria en Lima. Dos métodos: de abajo hacia arriba (hogares propietarios titulados × demanda × ticket) y de arriba hacia abajo (volumen del líder ÷ su participación).</div></div>
+      <div class="nm hl"><div class="v">S/550 M</div><div class="l">SAM · por año</div><div class="h">Tickets de S/150k o más (~55% del valor) en zonas cuyo valor respalda un LTV ≤50% (~40%).</div></div>
+      <div class="nm"><div class="v">S/30–60 M</div><div class="l">SOM · 12–24 meses</div><div class="h">Es la meta de S/2,5–5 M al mes: 5–11% del SAM. Es ambiciosa pero posible. En US$ sería ~40% del SAM, lo que no es realista.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIA -->
+<section id="competencia">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">06 · Competencia <span class="when">consultado el 6-oct-2026</span></div>
+      <h2>Todos prometen "aunque estés en Infocorp". Casi nadie muestra el costo total.</h2>
+      <p>Miguel Ángel estima 40–50 actores <span class="tag e">Entrevista</span>. Estos son los más visibles <span class="tag x">Externo</span>. Ojo: buena parte de la prensa del sector son publirreportajes.</p>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Actor</th><th>Tasa publicada</th><th>Monto</th><th>Desembolso</th><th>Inversionistas</th></tr></thead>
+      <tbody>
+        <tr><td><b>Prestamype</b><br><small>Líder en marca y pauta masiva</small></td><td>desde 1,05% mens.</td><td>S/15k–2 M</td><td>~15 días</td><td>"hasta 28%"; +8.000</td></tr>
+        <tr><td><b>RTC</b> (ex RebajaTusCuentas)<br><small>Empresa B, inscrita en SBS</small></td><td>desde 1,17%; TCEA ej. 18,9%</td><td>S/20k–600k</td><td>7–10 días</td><td>no verificado</td></tr>
+        <tr><td><b>Creditomype</b><br><small>Publica su rango completo</small></td><td>2,8%–3,5% mens.</td><td>desde S/20k</td><td>7 días hábiles</td><td>+1.200; desde S/20k</td></tr>
+        <tr><td><b>KapitalízateYa</b> / Carrillo Royalty<br><small>Posiblemente del mismo grupo</small></td><td>"desde 1,8%"</td><td>S/15k–500k</td><td>≤7 días hábiles</td><td>"hasta 24%"</td></tr>
+        <tr><td><b>Prestaclub</b><br><small>"+22 años, +S/600 M"</small></td><td>desde 1,10%</td><td>S/10k–1 M</td><td>no verificado</td><td>no verificado</td></tr>
+        <tr><td><b>Cajas</b> (Huancayo, Arequipa)<br><small>Exigen sustentar ingresos</small></td><td>TEA 14–19%</td><td>hasta 80% del valor</td><td>no verificado</td><td>depósitos</td></tr>
+        <tr class="hl"><td><b>CAPEX</b></td><td>2,3%–5% mens.</td><td>S/150k – millones</td><td>7–90 días (prom. 15–18)</td><td>preferentes + grupos</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid3 mt">
+      <div class="card hl"><div class="k">Espacio libre 1</div><h3>Velocidad con fecha firme</h3><p style="margin:0">Ningún actor verificado promete una respuesta en 24 h con fecha de desembolso por escrito. El estándar del mercado es de 7–15 días.</p></div>
+      <div class="card hl"><div class="k">Espacio libre 2</div><h3>Costo total transparente</h3><p style="margin:0">Todos publican la tasa "desde". Mostrar la TCEA y todos los gastos desde el primer mensaje diferencia.</p></div>
+      <div class="card hl"><div class="k">Espacio libre 3</div><h3>Tickets grandes y casos complejos</h3><p style="margin:0">Ahí no se compite por precio. Al cliente estándar que llega, conviene derivarlo a un aliado a cambio de un fee de referido.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RIESGOS -->
+<section id="riesgos">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">07 · Marco regulatorio <span class="when">requiere validación con abogado</span></div>
+      <h2>Bien gestionado, el cumplimiento se convierte en argumento de venta.</h2>
+      <p>Esto describe el marco y sus riesgos; <b>no es asesoría legal</b>. Cada punto debe validarlo un abogado especialista en derecho financiero, registral y tributario.</p>
+    </div>
+    <div class="callout warn"><b>Riesgo alto 1: captación de fondos.</b> Ofrecer operaciones de forma habitual en <b>grupos de WhatsApp abiertos</b>, juntando a muchos inversionistas, puede parecerse a captación de fondos del público (art. 11 de la Ley 26702; art. 246 del Código Penal, con pena de 4–8 años si se usan redes sociales), o a <b>financiamiento participativo sin licencia SMV</b> (D.U. 013-2020). <span class="tag x">Externo</span></div>
+    <div class="callout warn"><b>Riesgo alto 2: tope de tasa.</b> El tope del BCRP para operaciones fuera del sistema financiero, vigente hasta el 31-oct-2026, es de <b>114,13% TEA en soles y 99,84% en dólares</b> <span class="tag x">Externo</span>. Una operación a 12 meses al 5% mensual con 10% de comisión pagada por el deudor tiene una TCEA de ~106% <span class="tag s">Supuesto</span>, <b>por encima del tope en dólares</b>.</div>
+    <div class="grid2 mt">
+      <div class="card"><div class="k">Marco aplicable</div><ul>
+        <li><b>Registro SBS de empresas de préstamo</b> (Res. SBS 650-2024): hay que precisar qué registro tiene CAPEX y su alcance.</li>
+        <li><b>UIF / lavado de activos</b> (Ley 29038, Res. SBS 789-2018): oficial de cumplimiento, conocimiento del cliente y reportes.</li>
+        <li><b>Fideicomiso:</b> el fiduciario debe ser una entidad autorizada por la SBS.</li>
+        <li><b>Pacto comisorio</b> (arts. 1111 y 1587 del CC): la compraventa con recompra ya fue recalificada judicialmente como préstamo.</li>
+        <li><b>Consumidor</b> (Ley 29571): obligación de informar el costo total y la TCEA.</li>
+      </ul></div>
+      <div class="card hl"><div class="k">Recomendaciones (para validar)</div><ul>
+        <li>Salir de los grupos abiertos y pasar a una <b>distribución 1 a 1</b> a una lista cerrada de inversionistas, con contrato marco y KYC.</li>
+        <li>Que CAPEX <b>nunca reciba ni administre fondos</b>.</li>
+        <li>Evaluar una alianza con una plataforma autorizada por la SMV, o tramitar una licencia propia.</li>
+        <li><b>Dejar de usar la compraventa con recompra</b> y usar fideicomiso o hipoteca.</li>
+        <li>Calcular la TCEA de cada operación, con un techo interno de ~90%.</li>
+        <li>Comunicar "inscritos en SBS", <b>nunca "supervisados"</b>.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRATEGIA -->
+<section id="estrategia">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">08 · Go-to-market <span class="when">segmentos y posicionamiento</span></div>
+      <h2>"Costo total por escrito desde el día uno. Plazos firmes. 10 años sin quitarle la casa a nadie."</h2>
+      <p>El solicitante llega con miedo a perder su casa; el inversionista, con miedo a una pirámide. Quien demuestre con hechos que no es ninguna de las dos cosas se queda con los dos lados.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="k">Solicitante S1</div><h3>Dueño de negocio informal</h3><ul><li>De 40 a 65 años, casa propia pagada</li><li>"El banco no me reconoce lo que gano"</li><li>Lo activa una campaña, un pedido grande o una deuda con un proveedor</li><li>Califica si el inmueble vale 2–3 veces lo que pide y su flujo se puede demostrar</li></ul></div>
+      <div class="card"><div class="k">Solicitante S2</div><h3>Sobreendeudado que quiere consolidar</h3><ul><li>Varias tarjetas y préstamos, reportado en Infocorp</li><li>Paga S/5–10k al mes solo de intereses</li><li>Lo activa una carta de cobranza o un rechazo del banco</li><li>Califica si la nueva cuota es menor que la suma de las actuales</li></ul></div>
+      <div class="card"><div class="k">Solicitante S3</div><h3>Liquidez puente</h3><ul><li>Tiene un ingreso futuro claro: una venta o una herencia</li><li>Los plazos bancarios no le sirven</li><li>Tiene un evento de salida verificable</li><li>Bajo riesgo y plazo corto</li></ul></div>
+      <div class="card"><div class="k">Inversionista I1</div><h3>Patrimonial conservador</h3><ul><li>De 50 a 70 años, con S/200k–2 M en depósitos</li><li>Quiere ganarle al plazo fijo (3–7%)</li><li>Necesita ver LTV bajo, el fideicomiso y las 0 ejecuciones</li><li>Producto: un "tramo conservador" con LTV ≤35%</li></ul></div>
+      <div class="card"><div class="k">Inversionista I2</div><h3>Rentista activo</h3><ul><li>De 35 a 55 años, ya tiene inmuebles</li><li>Busca 15–25% anual en 5 a 15 operaciones</li><li>Valora el flujo constante de operaciones y la cobranza incluida</li><li>Producto: ficha estándar y exclusividad de 24 h</li></ul></div>
+      <div class="card hl"><div class="k">Fuera de foco</div><h3>"Emergencias" como público</h3><p style="margin:0">No se recomienda hacer anuncios para gente desesperada: choca con el código ético de CAPEX y es la puerta a las malas prácticas del sector. Esos casos entran igual por S1 y S2.</p></div>
+    </div>
+
+    <h3 class="mt" style="margin-bottom:12px">Canales</h3>
+    <div class="grid4">
+      <div class="nm"><div class="l">Pauta con filtro</div><div class="h">Un anuncio que dice qué <b>sí</b> y qué <b>no</b> califica, un formulario con 5 preguntas eliminatorias y un bot de WhatsApp. Se mide el costo por lead calificado, no el costo por lead.</div></div>
+      <div class="nm"><div class="l">Orgánico educativo</div><div class="h">Contenido como "5 señales de que te quieren quitar la casa" o "qué es un fideicomiso en 60 segundos". Filtra y diferencia. Perfil de Google con reseñas reales.</div></div>
+      <div class="nm hl"><div class="l">Referidores estándar</div><div class="h">Simple 15% · Calificado 25% · Aliado premium 30–35% de la comisión. Se paga solo al desembolso y se elimina el 50%.</div></div>
+      <div class="nm"><div class="l">Alianzas</div><div class="h">Contadores de MYPE, notarías, tasadores (que además aceleran el proceso), inmobiliarias, gremios y abogados de sucesiones.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMBUDO -->
+<section id="embudo">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">09 · Embudo <span class="when">escenario base</span></div>
+      <h2>Con filtro hacen falta ~130 leads al mes para 8 operaciones. Sin filtro, más de 400.</h2>
+      <p>Las tasas de conversión son de referencia <span class="tag s">Supuesto</span>: se reemplazan con los datos reales en el mes 2.</p>
+    </div>
+    <div class="funnel" role="img" aria-label="Embudo base, de 100 leads a 6 desembolsos">
+      <div class="fr"><span class="lab">Lead</span><div class="barw"><div class="bar" style="width:100%"></div></div><span class="val">100</span></div>
+      <div class="fr"><span class="lab">Precalificado (25%)</span><div class="barw"><div class="bar" style="width:25%"></div></div><span class="val">25</span></div>
+      <div class="fr"><span class="lab">Calificado (60%)</span><div class="barw"><div class="bar" style="width:15%"></div></div><span class="val">15</span></div>
+      <div class="fr"><span class="lab">Expediente abierto (60%)</span><div class="barw"><div class="bar" style="width:9%"></div></div><span class="val">9</span></div>
+      <div class="fr"><span class="lab">Aprobado (80%)</span><div class="barw"><div class="bar" style="width:7.2%"></div></div><span class="val">7,2</span></div>
+      <div class="fr"><span class="lab">Fondeado (90%)</span><div class="barw"><div class="bar" style="width:6.5%"></div></div><span class="val">6,5</span></div>
+      <div class="fr"><span class="lab">Desembolsado (95%)</span><div class="barw"><div class="bar" style="width:6.2%"></div></div><span class="val">6,2</span></div>
+    </div>
+    <div class="grid3 mt">
+      <div class="nm"><div class="v">1,9%</div><div class="l">conservador</div><div class="h">~420 leads al mes para 8 operaciones</div></div>
+      <div class="nm hl"><div class="v">6,2%</div><div class="l">base</div><div class="h">~130 leads al mes para 8 operaciones</div></div>
+      <div class="nm"><div class="v">13,2%</div><div class="l">optimista</div><div class="h">~60 leads al mes para 8 operaciones</div></div>
+    </div>
+    <div class="callout"><b>Tiempos objetivo:</b> respuesta al lead en menos de 15 min (bot) o 4 h (persona) · llamada en menos de 24 h · aprobación en 7 días o menos · fondeo en 3 días o menos · desembolso en 4 días o menos. <b>Promedio de 12 días a los 6 meses.</b></div>
+  </div>
+</section>
+
+<!-- MENSAJES -->
+<section id="mensajes">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">10 · Mensajes <span class="when">listos para copiar</span></div>
+      <h2>El texto filtra antes de que el equipo gaste tiempo.</h2>
+    </div>
+    <div class="msgs">
+      <div class="msg"><div class="mh"><span class="w">Anuncio · S1 Negocio</span><span class="d">Meta</span><button class="copy">Copiar</button></div><pre>Tu casa ya trabaja por ti. Que también financie tu negocio.
+Préstamos desde S/150.000 con garantía de tu inmueble en Lima, aunque el banco te haya dicho que no. Te damos el costo total por escrito desde el primer día.
+✅ Inmueble inscrito a tu nombre ✅ Lima urbana ✅ Respuesta en 24 h
+[Ver si califico]</pre></div>
+      <div class="msg"><div class="mh"><span class="w">Anuncio · S2 Deudas</span><span class="d">Meta</span><button class="copy">Copiar</button></div><pre>Si pagas más de S/5.000 al mes en intereses de tarjetas, hay otra forma.
+Junta tus deudas en un solo préstamo con garantía de tu inmueble y una cuota que sí puedas pagar. Antes de que firmes nada, te mostramos el costo total.
+[Calcular mi cuota]</pre></div>
+      <div class="msg"><div class="mh"><span class="w">Anuncio · Confianza</span><span class="d">Remarketing · validar el dato antes de publicar</span><button class="copy">Copiar</button></div><pre>10 años. Ningún cliente perdió su casa con nosotros.
+Trabajamos con fideicomiso y un fiduciario regulado, así tu inmueble queda protegido para ambas partes. Mira cómo funciona en 60 segundos. ▶️</pre></div>
+      <div class="msg"><div class="mh"><span class="w">WhatsApp · Primer mensaje</span><span class="d">Bot, al instante</span><button class="copy">Copiar</button></div><pre>¡Hola [Nombre]! Soy [Asesor] de CAPEX 👋 Gracias por escribirnos.
+Para decirte en minutos si podemos ayudarte, te hago 4 preguntas rápidas:
+1️⃣ ¿El inmueble está inscrito en Registros Públicos a tu nombre?
+2️⃣ ¿En qué distrito está?
+3️⃣ ¿Cuánto vale aproximadamente y cuánto necesitas?
+4️⃣ ¿Para qué lo usarías: tu negocio, ordenar deudas u otra cosa?</pre></div>
+      <div class="msg"><div class="mh"><span class="w">WhatsApp · Si califica</span><span class="d">Bot → asesor</span><button class="copy">Copiar</button></div><pre>¡Gracias! Por lo que me cuentas, tu caso sí podría calificar ✅
+El siguiente paso es una llamada de 15 minutos con [Asesor]. Te explica cómo funciona, cuánto te costaría en total y cuánto demora. ¿Te queda mejor hoy a las [hora] o mañana a las [hora]?
+📄 Si tienes a mano tu número de partida registral, envíamelo y vamos adelantando la verificación.</pre></div>
+      <div class="msg"><div class="mh"><span class="w">WhatsApp · Si no califica</span><span class="d">Cierre amable</span><button class="copy">Copiar</button></div><pre>Gracias por la confianza, [Nombre]. Por ahora solo trabajamos con inmuebles inscritos a nombre de quien solicita, en Lima urbana y desde S/150.000, así que no podríamos ayudarte bien. Te dejo una guía gratuita para evitar préstamos abusivos con garantía: [link]. ¡Muchos éxitos!</pre></div>
+      <div class="msg"><div class="mh"><span class="w">Inversionista · Nueva oportunidad</span><span class="d">Envío 1 a 1, no en grupo</span><button class="copy">Copiar</button></div><pre>Hola [Nombre], soy [X] de CAPEX. Tenemos una nueva oportunidad: un préstamo de S/[monto] a [plazo] meses, al [tasa]% mensual, con garantía de un [tipo de inmueble] en [distrito] tasado en S/[valor] (LTV [x]%) y estructura de fideicomiso. Tienes exclusividad hasta el [fecha/hora]. ¿Te envío la ficha completa?</pre></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">11 · Plan de 90 días <span class="when">tres sprints de 30 días</span></div>
+      <h2>Medir y ordenar → filtrar y activar → escalar lo que funciona.</h2>
+    </div>
+    <div class="tl">
+      <div class="col cur" data-n="1">
+        <div class="wk">Días 1–30</div><div class="st">Medir y ordenar</div>
+        <ul>
+          <li><span class="who">MA + Renzo</span>Línea base con las últimas 20–30 operaciones</li>
+          <li><span class="who">MA + Cristóbal</span>Criterios de calificación y matriz de aprobación por escrito</li>
+          <li><span class="who">Esteban</span>CRM con dos pipelines; adiós al Excel</li>
+          <li><span class="who">Renzo</span>Checklist de expediente, cobro del análisis por adelantado y trámites en paralelo</li>
+          <li><span class="who">MA</span>Abrir la búsqueda del Gerente de Operaciones Comerciales</li>
+          <li><span class="who">Cristóbal</span>Encargar la opinión legal: captación, SMV, UIF y SBS</li>
+        </ul>
+        <div class="kpi">KPI: el 100% de las operaciones en el CRM · línea base medida</div>
+      </div>
+      <div class="col" data-n="2">
+        <div class="wk">Días 31–60</div><div class="st">Filtrar y activar</div>
+        <ul>
+          <li><span class="who">Esteban</span>Bot de precalificación en WhatsApp y formulario</li>
+          <li><span class="who">Esteban + Renzo</span>Volver a pautar con S/3–5k y filtro</li>
+          <li><span class="who">Renzo</span>Programa de referidores: contrato y tabla</li>
+          <li><span class="who">Cristóbal</span>Ficha estándar de oportunidad, CRM de inversionistas y primer desayuno</li>
+          <li><span class="who">MA</span>Contratar al nuevo rol y hacer su onboarding a su lado</li>
+          <li><span class="who">Esteban</span>Landing, perfil de Google y 10 reseñas</li>
+        </ul>
+        <div class="kpi">KPI: 25 o más precalificados · 6 o más expedientes · ciclo de 14 días o menos</div>
+      </div>
+      <div class="col" data-n="3">
+        <div class="wk">Días 61–90</div><div class="st">Escalar lo que funciona</div>
+        <ul>
+          <li><span class="who">Esteban</span>Duplicar el presupuesto de las campañas con mejor costo por lead calificado</li>
+          <li><span class="who">Renzo + Nuevo rol</span>Firmar 3 alianzas: contador, notaría y tasadora</li>
+          <li><span class="who">Nuevo rol</span>Llevar el 50% de las operaciones de punta a punta</li>
+          <li><span class="who">Cristóbal</span>Reporte mensual a inversionistas y nivel "Preferente"</li>
+          <li><span class="who">MA</span>Delegar la aprobación de los casos estándar</li>
+          <li><span class="who">Socios</span>Revisión de los 90 días y plan del siguiente trimestre</li>
+        </ul>
+        <div class="kpi">KPI: 6–8 operaciones en el mes · ciclo de 12 días o menos · 30% o más vía referidores</div>
+      </div>
+    </div>
+
+    <h3 class="mt" style="margin-bottom:12px">Experimentos de validación</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Hipótesis</th><th>Cómo probarla</th><th class="n">Costo</th><th>Criterio de éxito</th></tr></thead>
+      <tbody>
+        <tr><td>Un formulario con preguntas eliminatorias y un bot reducen los leads basura</td><td>A/B en Meta Lead Ads durante 3 semanas</td><td class="n">S/2.500</td><td>25% o más precalifican; costo por lead calificado menor a S/150</td></tr>
+        <tr><td>El mensaje de "deudas" convierte mejor que el de "negocio"</td><td>2 campañas en paralelo</td><td class="n">S/2.000</td><td>±30% de diferencia en expedientes</td></tr>
+        <tr><td>Cobrar el análisis por adelantado no reduce los cierres</td><td>Aplicarlo durante 6 semanas</td><td class="n">S/0</td><td>Los expedientes caen menos de 15%</td></tr>
+        <tr><td>El proceso en paralelo baja el ciclo a 12 días o menos</td><td>5 operaciones seguidas</td><td class="n">~S/1.000</td><td>Promedio de 12 días o menos</td></tr>
+        <tr><td>Los contadores son un canal rentable</td><td>Charla en 2 estudios contables y kit de referidor</td><td class="n">S/800</td><td>3 o más referidos calificados en 45 días</td></tr>
+        <tr><td>El contenido "anti-estafa" atrae mejores leads</td><td>8 reels educativos</td><td class="n">S/1.500</td><td>Precalificación orgánica igual o mayor que la de pauta</td></tr>
+        <tr><td>Hay demanda latente de inversionistas</td><td>Desayuno con 10 invitados referidos</td><td class="n">S/1.200</td><td>3 o más comprometen capital</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- HERRAMIENTAS -->
+<section id="herramientas">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">12 · Herramientas <span class="when">precios consultados en oct-2026</span></div>
+      <h2>Una sola plataforma central. Si son cinco herramientas sueltas, el equipo vuelve al Excel.</h2>
+      <p>Costo total estimado: <b>US$350–550 al mes</b> más los mensajes de Meta. Equivale a menos de 1/40 del margen de una operación base.</p>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>Necesidad</th><th>Recomendado</th><th>Alternativas</th><th class="n">US$/mes</th><th>Prioridad</th></tr></thead>
+      <tbody>
+        <tr><td>CRM y pipeline (solicitantes e inversionistas)</td><td><b>Kommo Advanced</b>, con WhatsApp API nativo</td><td>HubSpot Pro, Attio, Bitrix24</td><td class="n">~245</td><td>Alta · mes 1</td></tr>
+        <tr><td>IA en WhatsApp para precalificar</td><td>Salesbot de Kommo o <b>Respond.io</b></td><td>WATI, Leadsales, Treble</td><td class="n">0–159</td><td>Alta · mes 2</td></tr>
+        <tr><td>Formulario de precalificación</td><td><b>Tally</b></td><td>Typeform, Jotform, Meta Lead Ads</td><td class="n">0–24</td><td>Alta</td></tr>
+        <tr><td>Expediente documental</td><td><b>Google Workspace</b></td><td>Notion (para el manual)</td><td class="n">55–110</td><td>Alta · mes 1</td></tr>
+        <tr><td>Firma digital</td><td><b>DNIe + ReFirma</b> · DocuSign</td><td>ZapSign, Adobe Sign</td><td class="n">0–90</td><td>Media</td></tr>
+        <tr><td>Cobranza y recordatorios</td><td>Plantillas utility de WhatsApp desde el CRM</td><td>Respond.io, WATI</td><td class="n">~0,03/msj</td><td>Media</td></tr>
+        <tr><td>Automatización</td><td><b>Make</b></td><td>Zapier, n8n</td><td class="n">9–16</td><td>Media</td></tr>
+        <tr><td>Tablero de KPIs</td><td><b>Looker Studio</b></td><td>Power BI, Metabase</td><td class="n">0</td><td>Alta · mes 1</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="grid2 mt">
+      <div class="card"><div class="k">Se automatiza o estandariza</div><ul>
+        <li>Primer contacto y filtro (bot)</li>
+        <li>Consulta de partida y gravámenes el mismo día</li>
+        <li>Checklist de documentos con recordatorios</li>
+        <li>Propuesta en PDF desde una plantilla</li>
+        <li>Envío a inversionistas y exclusividad de 24 h</li>
+        <li>Recordatorios de cobranza</li>
+      </ul></div>
+      <div class="card"><div class="k">Depende de terceros (no se acelera, se adelanta)</div><ul>
+        <li>CRI de SUNARP: 3–5 días hábiles, pedido el día 1</li>
+        <li>Tasación por perito: alianza con turno garantizado</li>
+        <li>Revisión legal: checklist y precio fijo</li>
+        <li>Fiduciario y notaría: minuta modelo preaprobada</li>
+      </ul></div>
+    </div>
+
+    <h3 class="mt" style="margin-bottom:12px">Tablero mínimo de KPIs, revisado cada lunes</h3>
+    <ul class="check">
+      <li><label><input type="checkbox"><span>Leads por canal y % de precalificados<span class="sub">Demanda · semanal</span></span></label></li>
+      <li><label><input type="checkbox"><span>Costo por lead calificado y expedientes abiertos<span class="sub">Demanda · semanal</span></span></label></li>
+      <li><label><input type="checkbox"><span>Ciclo total y días por etapa<span class="sub">Velocidad · semanal</span></span></label></li>
+      <li><label><input type="checkbox"><span>Operaciones desembolsadas, ticket, margen neto por operación y costo hundido<span class="sub">Resultado · semanal y mensual</span></span></label></li>
+      <li><label><input type="checkbox"><span>Capital comprometido disponible, días de fondeo y % de reinversión<span class="sub">Inversionistas · semanal</span></span></label></li>
+      <li><label><input type="checkbox"><span>Morosidad a más de 7, 30 y 90 días, y LTV promedio<span class="sub">Riesgo · mensual</span></span></label></li>
+      <li><label><input type="checkbox"><span>% de operaciones con KYC completo y TCEA bajo el tope del BCRP<span class="sub">Cumplimiento · mensual</span></span></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ROL -->
+<section id="rol">
+  <div class="shell">
+    <div class="sec-head">
+      <div class="eyebrow">13 · El rol clave <span class="when">la prioridad de Miguel Ángel</span></div>
+      <h2>Gerente(a) de Operaciones Comerciales</h2>
+      <p>Lleva cada operación de punta a punta con el criterio de Miguel Ángel, y es la cara de confianza frente a solicitantes e inversionistas. "Ejecutivo comercial" es un nombre que se queda corto y atrae el perfil equivocado.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="k">Responsabilidades</div><ul>
+        <li>Calificar y negociar con los solicitantes precalificados</li>
+        <li>Coordinar SUNARP, tasadora, abogado, fiduciario y notaría; es responsable del ciclo</li>
+        <li>Preparar las propuestas y gestionar el fondeo</li>
+        <li>Mantener el CRM al día y reportar los KPIs</li>
+        <li>Escribir el manual de operación con Miguel Ángel</li>
+        <li>Desde el día 90, aprobar los casos estándar</li>
+      </ul></div>
+      <div class="card"><div class="k">Perfil</div><ul>
+        <li>4 años o más en banca hipotecaria o de pyme, cajas, área legal-registral, notaría o corretaje con financiamiento</li>
+        <li>Sabe leer partidas, gravámenes y tasaciones; entiende hipoteca y fideicomiso; calcula TCEA</li>
+        <li>Transmite seguridad a dos públicos muy distintos</li>
+        <li><b>Descartar:</b> el cierre agresivo sin conocimiento técnico</li>
+      </ul></div>
+      <div class="card hl"><div class="k">Compensación y selección <span class="tag s">Supuesto</span></div><ul>
+        <li>Fijo de S/5–7k + 5–8% de la comisión de cada operación que lleve</li>
+        <li>Bono trimestral por ciclo de 12 días o menos y cero incidentes</li>
+        <li>Caso práctico con una partida y una tasación reales</li>
+        <li>Entrevista con un inversionista de confianza: "¿le confiarías tu dinero?"</li>
+        <li>Período de prueba de 90 días con los KPIs del sprint 3</li>
+      </ul></div>
+    </div>
+
+    <div class="callout mt"><b>Datos que faltan confirmar para cerrar el plan:</b> la moneda de la meta mensual · las operaciones que hoy cierran al mes y la cartera activa · la conversión y el CAC por canal · la morosidad · los costos fijos completos · la capacidad de fondeo de los inversionistas · el alcance del registro SBS.</div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <span>CAPEX · Propuesta estratégica · Octubre 2026</span>
+    <span>Documento completo con todas las fuentes: <a href="https://github.com/pablob-lab/capex-estrategia-comercial">repositorio</a></span>
+  </div>
+  <div class="footbar">Los temas legales y tributarios requieren validación con un abogado especialista.</div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.closest('.msg').querySelector('pre').innerText;
+    var done=function(){b.textContent='Copiado';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1600)};
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}
+  });
+});
+var links=[].slice.call(document.querySelectorAll('.steps a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.remove('on')});
+        var a=links[secs.indexOf(e.target)];
+        if(a){a.classList.add('on');var s=a.parentNode;s.scrollLeft=a.offsetLeft-s.clientWidth/2+a.clientWidth/2}
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){if(s)io.observe(s)});
+}
+</script>
+</body>
+</html>
