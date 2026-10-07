@@ -2,6 +2,8 @@
 
 **Préstamos con garantía inmobiliaria · Lima, Perú · Octubre 2026**
 
+👉 **Presentación web:** https://pablob-lab.github.io/capex-estrategia-comercial/
+
 Documento de trabajo para los socios de CAPEX (Miguel Ángel, Cristóbal, Renzo y Esteban). Se basa en la entrevista de descubrimiento con Miguel Ángel del **6 de octubre de 2026** y en investigación pública sobre el mercado peruano.
 
 | # | Documento | Qué contiene |
